@@ -1,5 +1,9 @@
 body{
-    background-color: #02026a;
+  background: url(Gemini_Generated_Image_juiw23juiw23juiw.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -62,7 +66,21 @@ body{
 .footer-font{
     color: goldenrod !important;
 }
-.footer{
+footer{
     background: #07182E;
-    width: auto;
+    position: absolute;
+    top: 77%;
+    width: 100%;
+}
+.contact-footer{
+    position: absolute;
+    top: 30%; 
+    left: 0%;
+}
+.img-icon{
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
