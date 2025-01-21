@@ -1,7 +1,7 @@
 body {
-    background: #2c2c2c; /* Darker gray background */
-    background: linear-gradient(90deg, #2c2c2c 0%, #181818 100%, #000000 100%);
-    color: #ffffff;
+    background-image: url(bg-women.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .product-card {
 
