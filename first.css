@@ -1,8 +1,9 @@
 body {
-    background: #2c2c2c; /* Darker gray background */
-    background: linear-gradient(90deg, #2c2c2c 0%, #181818 100%, #000000 100%);
+    background: #000000; /* Fallback for older browsers */
+    background: linear-gradient(to right, #2C2C2C 22% ,#989393 49%,rgba(252,176,69,1) 70%, rgba(253,29,29,1) 100%);
     color: #ffffff;
 }
+
 
 .card {
     position: relative;
