@@ -3,56 +3,83 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.product-card {
-
-        height: 226px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        padding: 15px;
-        width: 164px;
-        font-family: Arial, sans-serif;
-        position: relative;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-.product-card h2 {
-    font-size: 1.2em;
-    margin: 0 0 10px;
-}
-
-.product-card p {
-    font-size: 0.9em;
-    color: #555;
-    margin: 0 0 10px;
-}
-
-.price-cart {
+/* From Uiverse.io by JohnnyCSilva */
+.card {
+    width: 195px;
+    height: 285px;
+    background: #313131;
+    border-radius: 20px;
+;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    margin-top: 10px;
+    justify-content: center;
+    color: white;
+    transition: 0.2s ease-in-out;
 }
 
-.price {
-    font-size: 1.1em;
+.img {
+    border-radius: 7%;
+    height: 36%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    background-size: cover;
+}
+
+.textBox {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.textBox > .text {
     font-weight: bold;
 }
 
-.cart-button {
-    background: none;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.textBox > .head {
+    font-size: 20px;
 }
 
-.cart-button:hover {
-    background-color: #f0f0f0;
+.textBox > .price {
+    font-size: 17px;
 }
 
-.cart-icon {
-    font-size: 1.2em;
+.textBox > span {
+    font-size: 12px;
+    color: lightgrey;
 }
+
+.card:hover > .textBox {
+    opacity: 1;
+}
+
+.card:hover > .img {
+    height: 65%;
+    filter: blur(7px);
+    animation: anim 3s infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    transform: scale(1.04) rotate(-1deg);
+}
+
