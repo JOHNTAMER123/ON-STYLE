@@ -48,6 +48,21 @@
             font-size: 1rem;
             color: #555;
         }
+
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-right {
+            animation: fadeInRight 1s forwards;
+        }
     </style>
     <link rel="stylesheet" href="first.css">
 </head>
@@ -61,7 +76,7 @@
             <div class="card" id="left-card">
                 <img src="firstPhot.jpg" alt="Men's Hairdresser" class="card-img-top">
             </div>
-            <div class="card">
+            <div class="card" id="second-card">
                 <img src="Second.JFIF" alt="Women's Hairdresser" class="card-img-top">
             </div>
         </div>
@@ -72,6 +87,13 @@
             this.classList.add('slide-out-left');
             setTimeout(function() {
                 window.location.href = 'menMainpage.html';
+            }, 1000); // Match the duration of the animation
+        });
+
+        document.getElementById('second-card').addEventListener('click', function() {
+            document.body.classList.add('fade-in-right');
+            setTimeout(function() {
+                window.location.href = 'womenMainPage.html';
             }, 1000); // Match the duration of the animation
         });
     </script>

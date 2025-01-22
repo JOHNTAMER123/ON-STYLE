@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Men Main Page</title>
     <link rel="stylesheet" href="Men.css">
+    <style>
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-right {
+            animation: fadeInRight 1s forwards;
+        }
+    </style>
 </head>
 <body>
     <div class="countanair1">
@@ -44,7 +60,7 @@
     document.querySelectorAll('.glass').forEach(card => {
         card.addEventListener('click', function() {
             const cardHtml = `
-                <div class="card-pricing fade-in">
+                <div class="card-pricing fade-in-right">
                     <div class="card-img-pricing"></div>
                     <div class="card-info-pricing">
                         <p class="text-title-pricing">Product title</p>
