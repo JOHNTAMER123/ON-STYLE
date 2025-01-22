@@ -106,3 +106,24 @@ body {
 .fade-in {
     animation: fadeIn 1s forwards;
 }
+.footer-font{
+    color: goldenrod !important;
+}
+footer{
+    background: #07182E;
+    position: absolute;
+    top: 77%;
+    width: 100%;
+}
+.contact-footer{
+    position: absolute;
+    top: 30%; 
+    left: 0%;
+}
+.img-icon{
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
