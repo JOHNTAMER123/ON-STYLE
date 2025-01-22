@@ -13,3 +13,23 @@
 .footer-font{
     color: goldenrod !important;
 }
+
+.img-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card-img-pricing {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s;
+}
+
+.card-img-pricing:active {
+    transform: scale(0.95);
+}
