@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Cards</title>
+    <title>Women Main Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,14 +25,21 @@
 
         .linkCard {
             position: relative;
-            width: 200px;
-            height: 300px;
-            border-radius: 15px;
+            display: block;
+            width: 300px;
+            height: 200px;
+            margin: 20px;
             overflow: hidden;
+<<<<<<< HEAD
             text-decoration: none;
             color: rgb(16, 12, 12);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+=======
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+>>>>>>> 58747d523df1ad4ec5cb67d863ba7739d821455f
         }
 
         .linkCard:hover {
@@ -43,8 +50,7 @@
         .linkCardBackground {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the image covers the entire area */
-            background-size: cover; /* Scales the image to cover the card area */
+            object-fit: cover;
             transition: opacity 0.3s ease;
         }
 
@@ -58,209 +64,94 @@
             left: 10px;
             font-size: 1.2em;
             font-weight: bold;
+            color: wheat;
+
             background: rgba(0, 0, 0, 0.6);
             padding: 5px 10px;
             border-radius: 5px;
         }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-left {
+            animation: fadeInLeft 1s forwards;
+        }
     </style>
 </head>
 <body>
-<div class="cardsSection">
-    <a class="linkCard" href="haircut.html">
-        <img
+    <div class="cardsSection">
+        <a class="linkCard fade-in-left" href="haircut.html">
+            <img
                 class="linkCardBackground"
                 src="hair%20cut%20img%202.jpg"
-                alt="Hair cut"
-        />
-        <div class="linkCardTitle">Hair cut</div>
-    </a>
-    <a class="linkCard" href="hairstyling.html">
-        <img
+                alt="Hair cut" />
+            <div class="linkCardTitle">Hair cut</div>
+        </a>
+        <a class="linkCard fade-in-left" href="hairstyling.html">
+            <img
                 class="linkCardBackground"
                 src="img.png"
-                alt="Hair styling"
-        />
-        <div class="linkCardTitle">Hair styling</div>
-    </a>
-    <a class="linkCard" href="hair-coloring.html">
-        <img
+                alt="Hair styling" />
+            <div class="linkCardTitle">Hair styling</div>
+        </a>
+        <a class="linkCard fade-in-left" href="hair-coloring.html">
+            <img
                 class="linkCardBackground"
-src="img_1.png"
-                alt="Hair coloring"
-        />
-        <div class="linkCardTitle">Hair coloring</div>
-    </a>
-</div>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
-
-    .cardsSection {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .linkCard {
-        position: relative;
-        width: 200px;
-        height: 300px;
-        border-radius: 15px;
-        overflow: hidden;
-        text-decoration: none;
-        color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .linkCard:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .linkCardBackground {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: opacity 0.3s ease;
-    }
-
-    .linkCard:hover .linkCardBackground {
-        opacity: 0.8;
-    }
-
-    .linkCardTitle {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        font-size: 1.2em;
-        font-weight: bold;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
-</style>
-</head>
-<body>
-<div class="cardsSection">
-    <a class="linkCard" href="treamtments.html">
-        <img
+                src="img_1.png"
+                alt="Hair coloring" />
+            <div class="linkCardTitle">Hair coloring</div>
+        </a>
+        <a class="linkCard fade-in-left" href="treamtments.html">
+            <img
                 class="linkCardBackground"
-src="img_2.png"
-                alt="Treatment"
-        />
-        <div class="linkCardTitle">Treatment</div>
-    </a>
-    <a class="linkCard" href="makeup.html">
-        <img
+                src="img_2.png"
+                alt="Treatment" />
+            <div class="linkCardTitle">Treatment</div>
+        </a>
+        <a class="linkCard fade-in-left" href="makeup.html">
+            <img
                 class="linkCardBackground"
-src="img_3.png"
-                alt="Make up"
-        />
-        <div class="linkCardTitle">Make up</div>
-    </a>
-    <a class="linkCard" href="Lashes.html">
-        <img
+                src="img_3.png"
+                alt="Make up" />
+            <div class="linkCardTitle">Make up</div>
+        </a>
+        <a class="linkCard fade-in-left" href="Lashes.html">
+            <img
                 class="linkCardBackground"
-src="img_4.png"
-                alt="Lashes"
-        />
-        <div class="linkCardTitle">Lashes</div>
-    </a>
-</div>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
-
-    .cardsSection {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .linkCard {
-        position: relative;
-        width: 200px;
-        height: 300px;
-        border-radius: 15px;
-        overflow: hidden;
-        text-decoration: none;
-        color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .linkCard:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .linkCardBackground {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: opacity 0.3s ease;
-    }
-
-    .linkCard:hover .linkCardBackground {
-        opacity: 0.8;
-    }
-
-    .linkCardTitle {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        font-size: 1.2em;
-        font-weight: bold;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
-</style>
-</head>
-<body>
-<div class="cardsSection">
-    <a class="linkCard" href="skincare.html">
-        <img
+                src="img_4.png"
+                alt="Lashes" />
+            <div class="linkCardTitle">Lashes</div>
+        </a>
+        <a class="linkCard fade-in-left" href="skincare.html">
+            <img
                 class="linkCardBackground"
-src="img_5.png"
-                alt="Skin care"
-        />
-        <div class="linkCardTitle">Skin care</div>
-    </a>
-    <a class="linkCard" href="hardgel.html">
-        <img
+                src="img_5.png"
+                alt="Skin care" />
+            <div class="linkCardTitle">Skin care</div>
+        </a>
+        <a class="linkCard fade-in-left" href="hardgel.html">
+            <img
                 class="linkCardBackground"
-src="img_9.png"                alt="Hard Gel"
-        />
-        <div class="linkCardTitle">Hard Gel</div>
-    </a>
-    <a class="linkCard" href="acrylic.html">
-        <img
+                src="img_9.png"
+                alt="Hard Gel" />
+            <div class="linkCardTitle">Hard Gel</div>
+        </a>
+        <a class="linkCard fade-in-left" href="acrylic.html">
+            <img
                 class="linkCardBackground"
-src="img_7.png"
-                alt="Acrylic"
-        />
-        <div class="linkCardTitle">Acrylic</div>
-    </a>
-</div>
+                src="img_7.png"
+                alt="Acrylic" />
+            <div class="linkCardTitle">Acrylic</div>
+        </a>
+    </div>
 </body>
 </html>
