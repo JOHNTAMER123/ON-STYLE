@@ -10,3 +10,6 @@
 .slide-out-left {
     animation: slideOutLeft 1s forwards;
 }
+.footer-font{
+    color: goldenrod !important;
+}
