@@ -111,8 +111,20 @@
             border: 1px solid #000000;
             border-radius: 4px;
         }
-        label{
-            color: #fff;
+
+        .payment-button {
+            padding: 10px 20px;
+            background-color: #666; /* Green background */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 60px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .payment-button:hover {
+            color: black; /* White text */
+            background-color: #ffffff; /* Darker green on hover */
         }
     </style>
 </head>
@@ -181,6 +193,9 @@ alt="Highlights"
             </div>
         </div>
     </div>
+</div>
+<div>
+    <button class="payment-button" style="position: absolute; bottom: 100px; left: 45%; " onclick="location.href='payment.html'">Payment</button>
 </div>
 </body>
 </html>
