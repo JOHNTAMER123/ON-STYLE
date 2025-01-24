@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle,#caa49c 5%, #644a45 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .payment-container {
+            background: #55515180;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .payment-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .payment-method {
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .payment-method input {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4d4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            color: black;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Choose a Payment Method</h1>
+        <form id="paymentForm">
+            <div class="payment-method">
+                <input type="radio" id="visa" name="payment" value="Visa" required>
+                <label for="visa">Visa</label>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="cash" name="payment" value="Cash">
+                <label for="cash">Cash</label>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="instapay" name="payment" value="Instapay">
+                <label for="instapay">Instapay</label>
+            </div>
+            <button type="button" onclick="proceedToNextPage()">Proceed</button>
+        </form>
+    </div>
+
+    <script>
+        function proceedToNextPage() {
+            // Get the selected payment method
+            const selectedPayment = document.querySelector('input[name="payment"]:checked');
+
+            if (!selectedPayment) {
+                alert("Please select a payment method.");
+                return;
+            }
+
+            // Redirect based on the selected payment method
+            if (selectedPayment.value === "Visa") {
+                window.location.href = "card_details.html"; // Redirect to Visa card details page
+            } else {
+                window.location.href = "details.html"; // Redirect to billing information page
+            }
+        }
+    </script>
+</body>
+</html>
+

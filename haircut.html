@@ -109,16 +109,28 @@
             border: 1px solid #000000;
             border-radius: 4px;
         }
+
+        .payment-button {
+            padding: 10px 20px;
+            background-color: #666; /* Green background */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 60px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .payment-button:hover {
+            color: black; /* White text */
+            background-color: #ffffff; /* Darker green on hover */
+        }
     </style>
 </head>
 <body>
 <div class="cart-container">
     <div class="cart-item-container">
         <div class="cart-item">
-            <img
-src="img_8.png"
-alt="Bob Cut"
-            />
+            <img src="img_8.png" alt="Bob Cut"/>
             <div class="cart-item-details">
                 <p class="cart-item-title">Bob Cut</p>
                 <div class="cart-item-price">300EGP</div>
@@ -157,9 +169,7 @@ alt="Bob Cut"
     </div>
     <div class="cart-item-container">
         <div class="cart-item">
-            <img src="img_10.png" height="1308" width="736"
-                    alt="Bamboo Toothbrush"
-            />
+            <img src="img_10.png" height="1308" width="736" alt="Bamboo Toothbrush"/>
             <div class="cart-item-details">
                 <p class="cart-item-title">Pixie Cut</p>
                 <div class="cart-item-price">300EGP</div>
@@ -175,6 +185,9 @@ alt="Bob Cut"
             </div>
         </div>
     </div>
+</div>
+<div>
+    <button class="payment-button" style="position: absolute; bottom: 100px; left: 45%; " onclick="location.href='payment.html'">Payment</button>
 </div>
 </body>
 </html>
