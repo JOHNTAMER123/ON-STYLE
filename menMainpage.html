@@ -69,35 +69,146 @@
             background-color: #ffffff; /* Darker green on hover */
         }
 
+        /* From Uiverse.io by gagan-gv */ 
+        .btn {
+            display: block;
+            padding: 0.7em 1em;
+            background: transparent;
+            outline: none;
+            border: 0;
+            color: #d4af37;
+            letter-spacing: 0.1em;
+            font-family: monospace;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cube {
+            position: relative;
+            transition: all 0.5s;
+        }
+
+        .cube .bg-top {
+            position: absolute;
+            height: 10px;
+            background: #d4af37;
+            bottom: 100%;
+            left: 5px;
+            right: -5px;
+            transform: skew(-45deg, 0);
+            margin: 0;
+            transition: all 0.4s;
+        }
+
+        .cube .bg-top .bg-inner {
+            bottom: 0;
+        }
+
+        .cube .bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            background: #d4af37;
+            transition: all 0.4s;
+        }
+
+        .cube .bg-right {
+            position: absolute;
+            background: #d4af37;
+            top: -5px;
+            z-index: 0;
+            bottom: 5px;
+            width: 10px;
+            left: 100%;
+            transform: skew(0, -45deg);
+            transition: all 0.4s;
+        }
+
+        .cube .bg-right .bg-inner {
+            left: 0;
+        }
+
+        .cube .bg-inner {
+            background: #28282d;
+            position: absolute;
+            left: 2px;
+            right: 2px;
+            top: 2px;
+            bottom: 2px;
+        }
+
+        .cube .text {
+            position: relative;
+            transition: all 0.4s;
+        }
+
+        .cube:hover .bg-inner {
+            background: #d4af37;
+            transition: all 0.4s;
+        }
+
+        .cube:hover .text {
+            color: #28282d;
+            transition: all 0.4s;
+        }
+
+        .cube:hover .bg-right,
+        .cube:hover .bg,
+        .cube:hover .bg-top {
+            background: #28282d;
+        }
+
+        .cube:active {
+            z-index: 9999;
+            animation: bounce 0.1s linear;
+        }
+
+        @keyframes bounce {
+            50% {
+                transform: scale(0.9);
+            }
+        }
+
+        .card {
+            display: none;
+            position: fixed;
+            bottom: 230px;
+            left: 44%;
+            transform: translateX(-50%);
+            background: rgba(128, 128, 128, 0.8); /* Gray background with opacity */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 1000;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .card.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
-    /* From Uiverse.io by Rahulcheryala */ 
-<button
-  type="button"
-  class="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold border-4 border-white group"
->
-  <div
-    class="bg-green-400 rounded-xl h-12 w-1/4 grid place-items-center absolute left-0 top-0 group-hover:w-full z-10 duration-500"
-  >
-    <svg
-      width="25px"
-      height="25px"
-      viewBox="0 0 1024 1024"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill="#000000"
-        d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
-      ></path>
-      <path
-        fill="#000000"
-        d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
-      ></path>
-    </svg>
-  </div>
-  <p class="translate-x-4">Go Back</p>
-</button>
+
 
     <div class="countanair1">
         <div class="countainer">
@@ -128,6 +239,31 @@
             
               </div>
     </div>
+
+    <button class="btn cube cube-hover" type="button" id="showCardButton">
+        <div class="bg-top">
+            <div class="bg-inner"></div>
+        </div>
+        <div class="bg-right">
+            <div class="bg-inner"></div>
+        </div>
+        <div class="bg">
+            <div class="bg-inner"></div>
+        </div>
+        <div class="text">Barbers</div>
+    </button>
+
+    <div class="card" id="infoCard">
+        <h3>Contact Information</h3>
+        <ul>
+            <li>wilam ssad - 123456789</li>
+            <li>Jane Smith - 987654321</li>
+            <li>Bob Johnson - 555555555</li>
+            <li>Alice Brown - 444444444</li>
+            <li>Charlie Davis - 333333333</li>
+        </ul>
+    </div>
+
     <script>
     window.addEventListener('load', function() {
         document.body.classList.add('fade-in');
@@ -296,6 +432,10 @@
             `;
             document.body.innerHTML = cardHtml;
         });
+    });
+
+    document.getElementById('showCardButton').addEventListener('click', function() {
+        window.location.href = 'cardPage.html';
     });
     </script>
 </body>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <link rel="stylesheet" href="Men.css">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            display: block;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(128, 128, 128, 0.8); /* Gray background with opacity */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 1000;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        body {
+            background-image: url('man-image/HairCut.jpg'); /* Use the same background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h3>Contact Information</h3>
+        <ul>
+            <li>John Doe - 123456789</li>
+            <li>Jane Smith - 987654321</li>
+            <li>Bob Johnson - 555555555</li>
+            <li>Alice Brown - 444444444</li>
+            <li>Charlie Davis - 333333333</li>
+        </ul>
+    </div>
+</body>
+</html>
