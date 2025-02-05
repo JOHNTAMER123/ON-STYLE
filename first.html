@@ -7,6 +7,8 @@
     <link rel="icon" href="WhatsApp Image 2025-01-20 at 19.00.38_488f6471.png" type="image/png">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Add Font Awesome for star icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .fade-in-up {
             opacity: 0;
@@ -89,39 +91,121 @@
         .slide-out-right {
             animation: slideOutRight 1s forwards;
         }
+
+        /* Review Section Styles */
+        .review-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .review-section h2 {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .review-card {
+            /* background-color: #ffffff; */ /* Removed to match the rest of the page */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            max-width: 300px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .review-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .review-card .stars {
+            color: #ffc107; /* Gold color for stars */
+            margin-bottom: 10px;
+        }
+
+        .review-card .stars .fa-star {
+            font-size: 1.2rem;
+        }
+
+        .review-card p {
+            font-size: 1rem;
+            color: white;
+        }
     </style>
     <link rel="stylesheet" href="first.css">
 </head>
 <body>
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center ">
-        <div class="col-md-6 p-lg-5 mx-auto my-5 fade-in-up">
-          <h1 class="display-3 fw-bold">On Style</h1>
-          <h3 class="fw-normal text-muted mb-3" style="color: #ffffff !important;">Get the look you deserve</h3>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center ">
+    <div class="col-md-6 p-lg-5 mx-auto my-5 fade-in-up">
+        <h1 class="display-3 fw-bold">On Style</h1>
+        <h3 class="fw-normal text-muted mb-3" style="color: #ffffff !important;">Get the look you deserve</h3>
+    </div>
+    <div class="hairdresser-images fade-in-up">
+        <div class="card" id="left-card">
+            <img src="firstPhot.jpg" alt="Men's Hairdresser" class="card-img-top">
         </div>
-        <div class="hairdresser-images fade-in-up">
-            <div class="card" id="left-card">
-                <img src="firstPhot.jpg" alt="Men's Hairdresser" class="card-img-top">
-            </div>
-            <div class="card" id="second-card">
-                <img src="Second.jpg" alt="Women's Hairdresser" class="card-img-top">
-            </div>
+        <div class="card" id="second-card">
+            <img src="Second.jpg" alt="Women's Hairdresser" class="card-img-top">
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-        document.getElementById('left-card').addEventListener('click', function() {
-            this.classList.add('slide-out-left');
-            setTimeout(function() {
-                window.location.href = 'menMainpage.html';
-            }, 1000); // Match the duration of the animation
-        });
+</div>
 
-        document.getElementById('second-card').addEventListener('click', function() {
-            this.classList.add('slide-out-right');
-            setTimeout(function() {
-                window.location.href = 'womenMainPage.html';
-            }, 1000); // Match the duration of the animation
-        });
-    </script>
+<!-- Review Section -->
+<div class="review-section">
+    <h2>What Our Clients Say</h2>
+    <div class="review-card">
+        <h3>John Doe</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>"I had an amazing experience at On Style. The staff was very professional and the results were fantastic!"</p>
+    </div>
+    <div class="review-card">
+        <h3>Jane Smith</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>"The best haircut I've ever had. I highly recommend On Style to anyone looking for a great hairdresser."</p>
+    </div>
+    <div class="review-card">
+        <h3>Mike Johnson</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>"Friendly atmosphere and top-notch service. I will definitely come back!"</p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    document.getElementById('left-card').addEventListener('click', function() {
+        this.classList.add('slide-out-left');
+        setTimeout(function() {
+            window.location.href = 'menMainpage.html';
+        }, 1000); // Match the duration of the animation
+    });
+
+    document.getElementById('second-card').addEventListener('click', function() {
+        this.classList.add('slide-out-right');
+        setTimeout(function() {
+            window.location.href = 'womenMainPage.html';
+        }, 1000); // Match the duration of the animation
+    });
+</script>
 </body>
 </html>
